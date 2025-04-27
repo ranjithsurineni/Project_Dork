@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dork - About</title>
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="main-body">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <a href="/">Home</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/contact">Contact</a>
+            <a href="/aboutus">About Us</a>
+        </div>
+        <div>
+            <a href="/try" class="btn">Try Once 🚀 </a>
+            {% if current_user.is_authenticated %}
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/signin">Sign In</a>
+                <a href="/signup">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <br>
+        <br>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Project Dork Logo" class="logo-img" width="200" >
+        <br>
+        <h1 class="text-main">Welcome to Project Dork</h1>
+        <p class="main-text-p">
+            Project Dork is a tool designed to help users generate Google Dork queries effortlessly. 
+            <br>
+            It is aimed at cybersecurity enthusiasts, penetration testers, and researchers who want 
+            to explore advanced search techniques using Google.
+        </p>
+        <br>
+        <div class="main-text-p">
+            <a href="/try" class="btn">Try Once </a>
+        </div>
+        <br>
+    
+        <p class="main-text-p">
+            This tool is particularly useful for professionals in various domains, including:
+        </p>
+    
+        <div class="benefits-section mt-6">
+            <h2 class="main-text-p">Who Can Benefit from Project Dork?</h2>
+    
+            <!-- Card Container -->
+        <div class="card-container">
+            <div class="card">
+                <h3>🖥️ Software Engineers & DevOps <i class="fas fa-code"></i></h3>
+                <p>Locate hidden repositories, undocumented APIs, and exposed credentials effortlessly.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Network & Cybersecurity Engineers </h3>
+                <p>Find vulnerable servers, open network devices, and misconfigured security settings.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Mechanical & Electrical Engineers</h3>
+                <p>Discover engineering research papers, CAD models, and technical manuals for projects.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 AI & Data Science Engineers</h3>
+                <p>Access machine learning datasets, Jupyter notebooks, and pretrained AI models.</p>
+            </div>
+            <div class="card">
+                <h3>📰 Journalists & OSINT Investigators</h3>
+                <p>Uncover leaked documents, confidential reports, and investigate digital footprints.</p>
+            </div>
+            <div class="card">
+                <h3>🎓 Students & Academic Researchers</h3>
+                <p>Find free research papers, thesis reports, educational PDFs, and conference proceedings.</p>
+            </div>
+        </div>
+    
+        <p class="main-text-p">
+            Whether you're a beginner or an expert, Project Dork is here to assist you. 
+            <br>
+            For a detailed guide on how to use this tool efficiently, please refer to the documentation available at the top 
+            navigation bar, or <a href="/documentation" class="main-p-a">click here</a> for more clarity 
+            on features and best practices.
+        </p>
+        <br>
+        <p class="main-text-p">
+            If you have any questions or need assistance, feel free to reach out to us through the contact page.
+            <br>
+    </div>
+
+<!----------------------- Floating Chatbot Button ------------------------------------------->
+    <div id="chatbot-container">
+        <div id="chatbot-header" onclick="toggleChatbot()">🤖 Chat with us</div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask something..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendChatbotMessage()">Send</button>
+        </div>
+    </div>
+
+
+<!-- --------------------------footer Script ----------------------------------------------------------->
+    <footer class="main-footer">
+        <div class="main-footer-container">
+            <!-- About Dork SaaS -->
+            <div class="main-footer-column">
+                <h3>Dork SaaS</h3>
+                <p>AI-powered Google Dork Query Generator designed for cybersecurity professionals, ethical hackers, and security researchers.</p>
+                <p>Enhancing <strong>web reconnaissance</strong> with <strong>automation, AI-driven query optimization</strong>, and <strong>real-time vulnerability analysis</strong>.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="main-footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/aboutus">About Us</a></li>
+                    <li><a href="/documentation">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Features & Solutions -->
+            <div class="main-footer-column">
+                <h3>Cybersecurity Solutions</h3>
+                <ul>
+                    <li>🔍 Advanced Dorking Automation</li>
+                    <li>⚡ AI-Powered Query Optimization</li>
+                    <li>📊 Real-Time Security Analysis</li>
+                    <li>🛠 Ethical Hacking Toolkit</li>
+                    <li>📡 Dark Web & Deep Web Scanning</li>
+                    <li>🔒 Enterprise Security API (Coming Soon!)</li>
+                </ul>
+            </div>
+    
+            <!-- Legal & Policies -->
+            <div class="main-footer-column">
+                <h3>Legal & Policies</h3>
+                <ul>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service">Terms of Service</a></li>
+                    <li><a href="/security">Security Policy</a></li>
+                    <li><a href="/compliance">Compliance</a></li>
+                    <li><a href="/disclaimer">Disclaimer</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="main-footer-column">
+                <h3>Stay Updated 🚀</h3>
+                <p>Subscribe to our newsletter for the latest updates on <strong>AI-driven security tools, ethical hacking, and web reconnaissance advancements.</strong></p>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Social Media & Copyright -->
+        <div class="main-footer-bottom">
+            <div class="main-social-links">
+                <a href="https://twitter.com/DorkSaaS" target="_blank">🐦 Twitter</a>
+                <a href="https://github.com/DorkSaaS" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/company/dork-saas" target="_blank">🔗 LinkedIn</a>
+                <a href="https://discord.gg/dorksaas" target="_blank">💬 Discord Community</a>
+            </div>
+            <p>© 2025 Dork SaaS. All Rights Reserved. | Built for Cybersecurity & AI Automation.</p>
+        </div>
+    </footer>
+    
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    
+</body>
+</html>

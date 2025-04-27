@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+</head>
+<body class="signin-body">
+
+    <!-- Flash Messages -->
+    <div class="container mt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert-container">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+
+    <div class="signin-container">
+        <h1 class="text-3xl font-bold mb-4">Sign In</h1>
+        <form action="/signin" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            
+            <!-- Include the "next" parameter as a hidden input -->
+            {% if next %}
+                <input type="hidden" name="next" value="{{ next }}">
+            {% endif %}
+
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        <br>
+        <p class="mt-4">Don't have an account? <a href="/signup" class="text-blue-400 underline">Sign Up</a></p>
+    </div>
+
+    <!---------------------------- Footer ------------------------>
+    <footer class="signin-footer">
+        <div class="signin-footer-container">
+            <div class="signin-footer-column">
+                <h3>About Project Dork</h3>
+                <p>Project Dork is a SaaS platform designed to help users generate advanced Google Dork queries effortlessly.</p>
+            </div>
+            <div class="signin-footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/documentation">Documentation</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
+                </ul>
+            </div>
+            <div class="signin-footer-column">
+                <h3>Follow Us</h3>
+                <div class="signin-social-links">
+                    <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
+                    <a href="https://github.com" target="_blank">💻 GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="signin-footer-bottom">
+            <p>© 2025 Project Dork. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<!--------
+hear i want to rewrit the sign up page where i am unalble to sign in to the index page after i click in try rout but insted is doesnot shoes any response it simply reloadds 
+
+hear i want to do task like manage data storing and retrival parts to data base as mentioned above as postgrey url , and do functions 
+
+and i am getting error in log in with my past crediencial as i updated the security with hasshing process of password by tere is no hasing stored in data bases how do i do that ,, and also if do any task in website it hasst to store in database as logs just fix this and make where to change and altor code
+
+
+-->>

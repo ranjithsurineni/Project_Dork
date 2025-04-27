@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SaaS Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+   
+</head>
+<body class="contact-body">
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <a href="/">Home</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/aboutus">About Us</a>
+        </div>
+        <div>
+            {% if logged_in %}
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/signin">Sign In</a>
+                <a href="/signup">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="container-contact">
+
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" >Send Message</button>
+        </form>
+
+        <div class="success-message-contact" id="successMessage">✅ Message Sent Successfully!</div>
+        <div class="error-message-contact" id="errorMessage">❌ Please fill in all fields correctly.</div>
+    </div>
+
+    <!-- Floating Chatbot Button -->
+    <div id="chatbot-container">
+        <div id="chatbot-header" onclick="toggleChatbot()">🤖 Chat with us</div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask something..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendChatbotMessage()">Send</button>
+        </div>
+    </div>
+
+    <footer class="contact-footer">
+        <div class="contact-footer-container">
+            <!-- Contact Information -->
+            <div class="contact-footer-column">
+                <h3>Contact Dork SaaS</h3>
+                <p>Reach out for support, business inquiries, or feedback.</p>
+                <p>📧 Email: <a href="mailto:support@dorksaas.com">support@dorksaas.com</a></p>
+                <p>📞 Phone: +1 (800) 123-4567</p>
+                <p>📍 Location: 123 Cyber Security Lane, Tech City, USA</p>
+            </div>
+    
+            <!-- Support & Help -->
+            <div class="contact-footer-column">
+                <h3>Support & Help</h3>
+                <ul>
+                    <li><a href="/contact/support">Customer Support</a></li>
+                    <li><a href="/contact/faq">FAQs</a></li>
+                    <li><a href="/contact/report-issue">Report an Issue</a></li>
+                    <li><a href="/contact/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/contact/terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <!-- Business & Partnerships -->
+            <div class="contact-footer-column">
+                <h3>Business & Partnerships</h3>
+                <ul>
+                    <li><a href="/contact/enterprise-solutions">Enterprise Solutions</a></li>
+                    <li><a href="/contact/partnerships">Partnership Opportunities</a></li>
+                    <li><a href="/contact/investors">Investor Relations</a></li>
+                    <li><a href="/contact/media">Media & Press</a></li>
+                </ul>
+            </div>
+    
+            <!-- Connect with Us -->
+            <div class="contact-footer-column">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="https://twitter.com/DorkSaaS" target="_blank">🐦 Twitter</a></li>
+                    <li><a href="https://github.com/DorkSaaS" target="_blank">💻 GitHub</a></li>
+                    <li><a href="https://linkedin.com/company/dork-saas" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://discord.gg/dorksaas" target="_blank">💬 Discord</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="contact-footer-column">
+                <h3>Stay Connected 📢</h3>
+                <p>Subscribe to receive updates on security trends, AI automation, and new features.</p>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Social Media & Copyright -->
+        <div class="contact-footer-bottom">
+            <p>© 2025 Dork SaaS. All Rights Reserved. | Your AI-Powered Cybersecurity Assistant.</p>
+        </div>
+    </footer>
+    
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dork - Documentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+<body class="documentation-body">
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <a href="/">Home</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/contact">Contact</a>
+            <a href="/aboutus">About Us</a>
+        </div>
+        <div>
+            {% if current_user.is_authenticated %}
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/signin">Sign In</a>
+                <a href="/signup">Sign Up</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <!-- Documentation Content -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>📘 Documentation</h3>
+        <a href="#about" class="a-document">About Project Dork</a>
+        <a href="#features" class="a-document">Features</a>
+        <a href="#how-to-use" class="a-document">How to Use</a>
+        <a href="#best-practices" class="a-document">Best Practices</a>
+        <a href="#who-can-benefit" class="a-document">Who Can Benefit?</a>
+    </div>
+
+    
+    <!-- Main Content -->
+    <div class="content-doc">
+        
+            <h1>📄 Project Dork Documentation</h1>
+
+            <div class="section" id="about">
+                <h2>🔹 About Project Dork</h2>
+                <p class="document-text-p">
+                    Project Dork is a tool designed to help users generate Google Dork queries effortlessly. 
+                
+                    It is a powerful resource for cybersecurity professionals, OSINT investigators, researchers, 
+                    and ethical hackers to explore advanced search techniques using Google.
+                </p>
+            </div>
+
+            <div class="section" id="features">
+                <h2>✨ Features</h2>
+                <ul class="document-list">
+                    <li>✅ Generate Google Dork queries with a single click.</li>
+                    <li>✅ Explore advanced search techniques.</li>
+                    <li>✅ Save and view query history for future reference.</li>
+                </ul>
+            </div>
+
+            <div class="section" id="how-to-use">
+                <h2>🚀 How to Use</h2>
+                <p class="document-text-p">Follow these steps to generate Google Dork queries:</p>
+                <ol class="document-list">
+                    <li>Go to the <a href="/index" class="btn-doc">Try Once</a> page.</li>
+                    <li>Enter your search keywords in the input field.</li>
+                    <li>Click the "Generate Query" button.</li>
+                    <li>Use the "Copy Query" button to copy it.</li>
+                    <li>Click "Google Search" to execute it on Google.</li>
+                </ol>
+            </div>
+
+            <div class="section" id="best-practices">
+                <h2>⚠️ Best Practices</h2>
+                <p class="document-text-p">When using Google Dork queries, ensure that you:</p>
+                <ul>
+                    <li>🔹 Follow ethical hacking guidelines.</li>
+                    <li>🔹 Never use queries for illegal activities.</li>
+                    <li>🔹 Use responsibly in OSINT & cybersecurity research.</li>
+                </ul>
+            </div>
+
+            <!----------------------------------------------->
+
+            <div class="section-doc-proff" id="who-can-benefit">
+                <h2>💡 Who Can Benefit from Project Dork?</h2>
+    
+                <div class="benefit-category">
+                    <h3>1️⃣ Software Engineers & DevOps 🖥️</h3>
+                    <br>
+                    <p>🔍 <strong>Problem:</strong> Finding open-source code repositories, libraries, and configurations can be time-consuming.</p>
+                    <br>
+                    <p>⚡ <strong>Solution:</strong> Modified Dorking for Developers & DevOps</p>
+                    <ul class="document-list">
+                        <li>✅ Find leaked source codes: Search for .git repositories, .env files, and config.php in public sites.</li>
+                        <li>✅ Discover hidden APIs: Identify undocumented API endpoints from indexed documentation.</li>
+                        <li>✅ Locate exposed credentials: Detect plaintext passwords, SSH keys, or AWS credentials in public repositories.</li>
+                    </ul>
+                    <p>🚀 <strong>Example Dorks:</strong></p>
+                    <ul class="document-list">
+                        <li><code>intitle:"Index of" AND intext:"config.php"</code></li>
+                        <li><code>site:github.com "password" "config"</code></li>
+                        <li><code>filetype:json "api_key" OR "access_token"</code></li>
+                        <li><code>site:pastebin.com "SSH Key" OR "AWS_SECRET_ACCESS_KEY"</code></li>
+                    </ul>
+                    
+                </div>
+
+                <br>
+                    
+           <!----------------------------------------------->
+
+                <div class="benefit-category">
+                    <h3>2️⃣ Network & Cybersecurity Engineers 🛡️</h3>
+                    <p>🔍 <strong>Problem:</strong> Locating exposed servers, network configurations, and security vulnerabilities takes hours.</p>
+                    <p>⚡ <strong>Solution:</strong> Modified Dorking for Security Experts</p>
+                    <ul class="document-list">
+                        <li>✅ Find open network devices: Search for exposed routers, webcams, and IoT devices.</li>
+                        <li>✅ Identify misconfigured servers: Locate .log, .bak, .ini, and .conf files on public domains.</li>
+                        <li>✅ Discover vulnerable software versions: Track outdated servers running old versions of Apache, Nginx, and MySQL.</li>
+                    </ul>
+                    <p>🚀 <strong>Example Dorks:</strong></p>
+                    <ul class="document-list">
+                        <li><code>inurl:"phpinfo.php" "PHP Version"</code></li>
+                        <li><code>site:pastebin.com "SSH Key" OR "root password"</code></li>
+                        <li><code>intitle:"index of" AND (passwd OR shadow)</code></li>
+                        <li><code>site:shodan.io "open port 445" OR "port 22"</code></li>
+                    </ul>
+                    <p>💰 <strong>Monetization Idea:</strong> Sell an automated security audit tool ($49.99/month for businesses).</p>
+                </div>
+
+                <br>
+<!----------------------------------------------->
+
+                <div class="benefit-category">
+                    <h3>3️⃣ Mechanical & Electrical Engineers ⚙️🔌</h3>
+                    <p>🔍 <strong>Problem:</strong> Finding CAD designs, technical blueprints, and mechanical research papers is challenging.</p>
+                    <p>⚡ <strong>Solution:</strong> Dorking for Mechanical Engineers</p>
+                    <ul class="document-list">
+                        <li>✅ Find open-source CAD designs: Search for public STL, DXF, and STEP files.</li>
+                        <li>✅ Discover mechanical research papers: Access indexed engineering journals and whitepapers.</li>
+                        <li>✅ Locate supplier part catalogs: Find engineering component PDFs from manufacturers.</li>
+                    </ul>
+                    <p>🚀 <strong>Example Dorks:</strong></p>
+                    <ul class="document-list">
+                        <li><code>filetype:stl OR filetype:step "gear design"</code></li>
+                        <li><code>site:researchgate.net "mechanical engineering PDF"</code></li>
+                        <li><code>inurl:"index of" "SolidWorks files" OR "Autodesk Inventor"</code></li>
+                    </ul>
+                    <p>💰 <strong>Monetization Idea:</strong> Sell an AI-powered CAD search engine for engineers ($29.99/month).</p>
+                </div>
+
+                <br>
+<!----------------------------------------------->
+                
+                <div class="benefit-category">
+                    <h3>4️⃣ AI & Data Science Engineers 🤖📊</h3>
+                    <p>🔍 <strong>Problem:</strong> Finding datasets, machine learning research papers, and AI-related codes is hard.</p>
+                    <p>⚡ <strong>Solution:</strong> AI & Data Science Dorking</p>
+                    <ul class="document-list">
+                        <li>✅ Find open AI research papers: Search for academic ML & AI model research.</li>
+                        <li>✅ Locate free datasets: Identify public CSV, JSON, and dataset repositories.</li>
+                        <li>✅ Access pretrained models: Discover TensorFlow, PyTorch, and ONNX models.</li>
+                    </ul>
+                    <p>🚀 <strong>Example Dorks:</strong></p>
+                    <ul class="document-list">
+                        <li><code>filetype:csv OR filetype:xlsx "dataset"</code></li>
+                        <li><code>filetype:pkl OR filetype:h5 "machine learning model"</code></li>
+                        <li><code>site:arxiv.org "GPT" OR "transformer"</code></li>
+                        <li><code>intitle:"index of" "Jupyter Notebook" filetype:ipynb</code></li>
+                    </ul>
+                    <p>💰 <strong>Monetization Idea:</strong> Provide AI-driven research aggregation for ML engineers ($14.99/month).</p>
+                </div>
+
+                <br>
+<!----------------------------------------------->
+
+                <div class="benefit-category">
+                    <h3>5️⃣ Journalists & Investigative Reporters 📰🔍</h3>
+                    <p>🔍 <strong>Problem:</strong> Finding hidden government reports, leaked documents, and public records takes time.</p>
+                    <p>⚡ <strong>Solution:</strong> Advanced Dorking for Journalists</p>
+                    <ul class="document-list">
+                        <li>✅ Find leaked documents: Search for government PDFs, classified reports, and whistleblower leaks.</li>
+                        <li>✅ Locate hidden news sources: Discover archived pages and deleted articles.</li>
+                        <li>✅ Access court cases and legal records: Search for judgments, filings, and regulatory reports.</li>
+                    </ul>
+                    <p>🚀 <strong>Example Dorks:</strong></p>
+                    <ul class="document-list">
+                        <li><code>filetype:pdf site:gov "confidential report"</code></li>
+                        <li><code>inurl:"wikileaks.org" "classified"</code></li>
+                        <li><code>intitle:"index of" "FBI" OR "CIA" filetype:pdf</code></li>
+                    </ul>
+                    <p>💰 <strong>Monetization Idea:</strong> Provide a journalist-focused document discovery tool ($24.99/month).</p>
+                </div>
+
+                <br>
+<!----------------------------------------------->
+
+                
+                <div class="benefit-category">
+                    <h3>6️⃣ Digital Marketers & SEO Experts 📈🎯</h3>
+                    <p>🔍 <strong>Problem:</strong> Finding competitor backlinks, expired domains, and high-ranking keywords is difficult.</p>
+                    <p>⚡ <strong>Solution:</strong> SEO Dorking for Digital Marketers</p>
+                    <ul class="document-list">
+                        <li>✅ Find competitor backlinks: Identify indexed URLs linking to competitors.</li>
+                        <li>✅ Discover expired domains: Search for indexed domains no longer in use.</li>
+                        <li>✅ Locate high-ranking content: Analyze top-ranking pages for keyword insights.</li>
+                    </ul>
+                    <p>🚀 <strong>Example Dorks:</strong></p>
+                    <ul class="document-list">
+                        <li><code>site:example.com -site:example.com "backlink"</code></li>
+                        <li><code>inurl:"expired domain" "for sale"</code></li>
+                        <li><code>intitle:"top 10" "SEO ranking factors"</code></li>
+                    </ul>
+                    <p>💰 <strong>Monetization Idea:</strong> Build an SEO-focused Dorking dashboard ($19.99/month).</p>
+                </div>
+
+                <br>
+            <!----------------------------------------------->
+
+
+            <div class="benefit-category">
+                <h3>6️⃣ Students & Academic Researchers 🎓📚</h3>
+                <p>🔍 <strong>Problem:</strong> Finding free research papers, books, datasets, and thesis documents can be difficult.</p>
+                <p>⚡ <strong>Solution:</strong> Academic Dorking for Researchers & Students</p>
+                <ul class="document-list">
+                    <li>✅ Access free research papers: Locate indexed academic papers, conference proceedings, and whitepapers.</li>
+                    <li>✅ Find open-access textbooks: Search for freely available textbooks in PDF, EPUB, and DOCX formats.</li>
+                    <li>✅ Discover relevant datasets: Identify public datasets for thesis and research projects.</li>
+                </ul>
+                <p>🚀 <strong>Example Dorks:</strong></p>
+                <ul class="document-list">
+                    <li><code>filetype:pdf site:arxiv.org "deep learning research"</code></li>
+                    <li><code>filetype:xlsx OR filetype:csv "climate change dataset"</code></li>
+                    <li><code>inurl:"thesis" filetype:pdf site:.edu</code></li>
+                </ul>
+                <p>💰 <strong>Monetization Idea:</strong> Offer an academic research search engine with premium features ($9.99/month).</p>
+            </div>
+            
+            <br>
+        <!----------------------------------------------->
+
+            <div class="benefit-category">
+                <h3>7️⃣ Ethical Hackers & Bug Bounty Hunters 🕵️‍♂️🔓</h3>
+                <p>🔍 <strong>Problem:</strong> Finding security vulnerabilities in public domains requires advanced search techniques.</p>
+                <p>⚡ <strong>Solution:</strong> Ethical Hacking Dorking</p>
+                <ul class="document-list">
+                    <li>✅ Locate misconfigured databases: Search for exposed MongoDB, Elasticsearch, and SQL databases.</li>
+                    <li>✅ Find exposed admin panels: Identify login portals with weak security.</li>
+                    <li>✅ Detect publicly available sensitive files: Search for configuration, log, and backup files.</li>
+                </ul>
+                <p>🚀 <strong>Example Dorks:</strong></p>
+                <ul class="document-list">
+                    <li><code>intitle:"Admin Login" OR "Administrator Login" inurl:admin</code></li>
+                    <li><code>filetype:sql OR filetype:bak "database backup"</code></li>
+                </ul>
+                <p>💰 <strong>Monetization Idea:</strong> Sell an automated security audit tool for ethical hackers ($49.99/month).</p>
+            </div>
+
+            <br>
+      <!----------------------------------------------->
+
+            <div class="benefit-category">
+                <h3>8️⃣ Lawyers & Legal Researchers ⚖️📜</h3>
+                <p>🔍 <strong>Problem:</strong> Searching for court cases, legal documents, and regulatory filings is time-consuming.</p>
+                <p>⚡ <strong>Solution:</strong> Dorking for Legal Professionals</p>
+                <ul class="document-list">
+                    <li>✅ Find public court records: Search for case filings, judgments, and legal opinions.</li>
+                    <li>✅ Locate government policies: Identify indexed laws, regulations, and compliance documents.</li>
+                    <li>✅ Access legal templates: Discover contracts, agreements, and NDAs.</li>
+                </ul>
+                <p>🚀 <strong>Example Dorks:</strong></p>
+                <ul class="document-list">
+                    <li><code>filetype:pdf site:gov "court ruling" OR "judgment"</code></li>
+                    <li><code>intitle:"Index of" "contract template" filetype:doc</code></li>
+                </ul>
+                <p>💰 <strong>Monetization Idea:</strong> Provide a legal document search platform ($29.99/month).</p>
+            </div>
+
+            <br>
+     <!----------------------------------------------->
+      
+            <div class="benefit-category">
+                <h3>9️⃣ Business Analysts & Market Researchers 📊💼</h3>
+                <p>🔍 <strong>Problem:</strong> Finding market reports, competitor analysis, and financial documents is difficult.</p>
+                <p>⚡ <strong>Solution:</strong> Business Dorking for Analysts</p>
+                <ul class="document-list">
+                    <li>✅ Discover market reports: Locate public business reports, industry analysis, and whitepapers.</li>
+                    <li>✅ Find company financials: Search for SEC filings, investor presentations, and balance sheets.</li>
+                    <li>✅ Analyze competitor strategies: Identify indexed marketing documents, product roadmaps, and case studies.</li>
+                </ul>
+                <p>🚀 <strong>Example Dorks:</strong></p>
+                <ul class="document-list">
+                    <li><code>filetype:pdf site:sec.gov "Form 10-K" OR "Earnings Report"</code></li>
+                    <li><code>intitle:"Market Research" OR "Industry Report" filetype:pdf</code></li>
+                </ul>
+            </div>
+            
+            <br>
+        <!----------------------------------------------->
+
+
+            <div class="benefit-category">
+                <h3>🔟 E-Commerce & Dropshipping Entrepreneurs 🛒📦</h3>
+                <p>🔍 <strong>Problem:</strong> Finding trending products, supplier lists, and competitor pricing requires data scraping.</p>
+                <p>⚡ <strong>Solution:</strong> E-Commerce Dorking</p>
+                <ul class="document-list">
+                    <li>✅ Find trending product lists: Search for public inventory databases and supplier catalogs.</li>
+                    <li>✅ Locate supplier contact details: Identify manufacturers, wholesalers, and B2B sellers.</li>
+                    <li>✅ Analyze competitor pricing: Track online store pricing using indexed JSON or CSV files.</li>
+                </ul>
+                <p>🚀 <strong>Example Dorks:</strong></p>
+                <ul class="document-list">
+                    <li><code>filetype:xlsx OR filetype:csv "product catalog" OR "supplier list"</code></li>
+                    <li><code>inurl:"shopify.com" "best selling products"</code></li>
+                </ul>
+            </div>
+
+
+            <br>
+      <!----------------------------------------------->
+
+            
+            <div class="benefit-category">
+                <h3>1️⃣1️⃣ HR & Recruiters 🏢🎯</h3>
+                <p>🔍 <strong>Problem:</strong> Finding potential candidates, resume databases, and company employee structures is complex.</p>
+                <p>⚡ <strong>Solution:</strong> HR & Talent Dorking</p>
+                <ul class="document-list">
+                    <li>✅ Locate publicly available resumes: Search for candidate CVs in DOCX, PDF, and TXT formats.</li>
+                    <li>✅ Discover hiring trends: Analyze job postings, salary insights, and recruitment strategies.</li>
+                    <li>✅ Research competitor teams: Find employee profiles, team structures, and LinkedIn resumes.</li>
+                </ul>
+                <p>🚀 <strong>Example Dorks:</strong></p>
+                <ul class="document-list">
+                    <li><code>filetype:pdf OR filetype:docx "resume" "data scientist"</code></li>
+                    <li><code>inurl:"careers" OR "we are hiring" site:linkedin.com</code></li>
+                </ul>
+            </div>
+
+            </div>
+        
+    </div>
+
+
+    <!-- Floating Chatbot Button -->
+    <div id="chatbot-container">
+        <div id="chatbot-header" onclick="toggleChatbot()">🤖 Chat with us</div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask something..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendChatbotMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <!------------------------------ Footer ----------------------------->
+
+    <footer class="docs-footer">
+        <div class="docs-footer-container">
+            <!-- About the Documentation -->
+            <div class="docs-footer-column">
+                <h3>About Dork SaaS Docs</h3>
+                <p>Comprehensive documentation to guide users on using the **AI-powered Google Dork Query Generator** effectively.</p>
+                <p>Find setup instructions, API references, best practices, and security guidelines.</p>
+            </div>
+    
+            <!-- Quick Navigation -->
+            <div class="docs-footer-column">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="/docs/getting-started">Getting Started</a></li>
+                    <li><a href="/docs/installation">Installation Guide</a></li>
+                    <li><a href="/docs/api-reference">API Reference</a></li>
+                    <li><a href="/docs/use-cases">Use Cases</a></li>
+                    <li><a href="/docs/faq">FAQs</a></li>
+                    <li><a href="/docs/troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </div>
+    
+            <!-- Developer & API Resources -->
+            <div class="docs-footer-column">
+                <h3>Developer Resources</h3>
+                <ul>
+                    <li>⚙️ REST API Documentation</li>
+                    <li>📜 Open-Source SDKs</li>
+                    <li>📡 Web Scraping Best Practices</li>
+                    <li>🔐 Security & Compliance Guide</li>
+                    <li>📊 Query Optimization Techniques</li>
+                    <li>🛠 CLI & Terminal Commands</li>
+                </ul>
+            </div>
+    
+            <!-- Support & Community -->
+            <div class="docs-footer-column">
+                <h3>Support & Community</h3>
+                <ul>
+                    <li><a href="/docs/support">Help Center</a></li>
+                    <li><a href="https://github.com/DorkSaaS/issues" target="_blank">GitHub Issues</a></li>
+                    <li><a href="https://discord.gg/dorksaas" target="_blank">Join Discord</a></li>
+                    <li><a href="/docs/contribute">Contribute to Docs</a></li>
+                    <li><a href="/docs/changelog">Changelog & Updates</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="docs-footer-column">
+                <h3>Stay Updated 📢</h3>
+                <p>Subscribe to get updates on new features, API changes, and security enhancements.</p>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Social Media & Copyright -->
+        <div class="docs-footer-bottom">
+            <div class="docs-social-links">
+                <a href="https://twitter.com/DorkSaaS" target="_blank">🐦 Twitter</a>
+                <a href="https://github.com/DorkSaaS" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/company/dork-saas" target="_blank">🔗 LinkedIn</a>
+                <a href="https://discord.gg/dorksaas" target="_blank">💬 Discord</a>
+            </div>
+            <p>© 2025 Dork SaaS Docs. All Rights Reserved. | Open Documentation for Ethical Hacking & AI Security.</p>
+        </div>
+    </footer>
+    
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+</body>
+</html>

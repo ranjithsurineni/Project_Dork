@@ -1,0 +1,738 @@
+[
+    {
+        "question": "What is Project Dork?",
+        "answer": "Project Dork is a powerful SaaS platform designed to help various professionals, including software engineers, cybersecurity experts, AI researchers, journalists, digital marketers, and business analysts, efficiently search and retrieve hidden or hard-to-find online data using advanced search techniques."
+    },
+    {
+        "question": "Who can benefit from using Project Dork?",
+        "answer": "Project Dork is beneficial for software engineers, cybersecurity experts, AI researchers, journalists, digital marketers, and business analysts who need to find specific information online."
+    },
+    {
+        "question": "What are the main features of Project Dork?",
+        "answer": "Project Dork offers advanced search capabilities, customizable query generation, and a user-friendly interface for efficient data retrieval."
+    },
+    {
+        "question": "How does Project Dork work?",
+        "answer": "Project Dork takes user inputs and generates Google Dork queries to help find indexed information on search engines."
+    },
+    {
+        "question": "Is Project Dork open-source?",
+        "answer": "Yes, Project Dork is an open-source project available on GitHub."
+    },
+    {
+        "question": "What programming languages does Project Dork support?",
+        "answer": "Project Dork primarily supports Python for its backend operations."
+    },
+    {
+        "question": "Can I use Project Dork for ethical hacking?",
+        "answer": "Yes, it is designed for ethical hacking and cybersecurity research purposes."
+    },
+    {
+        "question": "Is there a community for Project Dork users?",
+        "answer": "Yes, there is an active community on GitHub and various cybersecurity forums."
+    },
+    {
+        "question": "How can I contribute to Project Dork?",
+        "answer": "You can contribute by submitting pull requests, reporting issues, or suggesting features on the GitHub repository."
+    },
+    {
+        "question": "What are the system requirements for Project Dork?",
+        "answer": "Project Dork requires Python 3.x and basic command-line knowledge to run."
+    },
+    {
+        "question": "Can I use Project Dork for OSINT?",
+        "answer": "Yes, it is a valuable tool for Open Source Intelligence (OSINT) investigations."
+    },
+    {
+        "question": "Is there a user manual for Project Dork?",
+        "answer": "Yes, the user manual and documentation are available on the GitHub repository."
+    },
+    {
+        "question": "How do I report bugs or issues with Project Dork?",
+        "answer": "You can report bugs by opening an issue on the GitHub repository."
+    },
+    {
+        "question": "What is the purpose of Project Dork?",
+        "answer": "The purpose of Project Dork is to simplify the process of finding hidden information online using advanced search techniques."
+    },
+    {
+        "question": "Can Project Dork be used for data scraping?",
+        "answer": "While it generates queries, it is not specifically designed for data scraping. Users should follow ethical guidelines."
+    },
+    {
+        "question": "Is there a mobile version of Project Dork?",
+        "answer": "Currently, Project Dork is designed for desktop use, but it may work on mobile with a Python environment."
+    },
+    {
+        "question": "How do I install Project Dork?",
+        "answer": "You can install Project Dork by cloning the GitHub repository and installing the required dependencies using pip."
+    },
+    {
+        "question": "What is the license for Project Dork?",
+        "answer": "Project Dork is licensed under the MIT License, allowing free use and modification."
+    },
+    {
+        "question": "Can I use Project Dork for personal projects?",
+        "answer": "Yes, it can be used for personal projects as long as it adheres to ethical guidelines."
+    },
+    {
+        "question": "Does Project Dork have a graphical user interface (GUI)?",
+        "answer": "Yes, Project Dork now features a Flask-based web interface, allowing users to interact with it through a user-friendly web page."
+    },
+    {
+        "question": "How do I access the web interface of Project Dork?",
+        "answer": "You can access the web interface by running the Flask server and navigating to the specified URL in your web browser, or by searching mywebsite.com for more details."
+    },
+    {
+        "question": "What is the difference between Project Dork and traditional search engines?",
+        "answer": "Project Dork focuses on generating advanced search queries to find specific information, while traditional search engines provide general search results."
+    },
+    {
+        "question": "Can I use Project Dork for competitive analysis?",
+        "answer": "Yes, it can be used for competitive analysis by uncovering publicly available information about competitors."
+    },
+    {
+        "question": "Is Project Dork safe to use?",
+        "answer": "Yes, as long as it is used ethically and legally, Project Dork is safe to use."
+    },
+    {
+        "question": "Can I use Project Dork for academic research?",
+        "answer": "Yes, it can be a valuable tool for academic research in cybersecurity and data analysis."
+    },
+    {
+        "question": "How do I get support for Project Dork?",
+        "answer": "You can get support by joining the community on GitHub or participating in relevant forums."
+    },
+    {
+        "question": "Can Project Dork be used for penetration testing?",
+        "answer": "Yes, ethical hackers and penetration testers use Google Dork queries to find vulnerabilities in their own systems."
+    },
+    {
+        "question": "Is there a limit to the number of queries I can run with Project Dork?",
+        "answer": "There is no hard limit, but excessive queries may lead to temporary bans from search engines."
+    },
+    {
+        "question": "Can I use Project Dork for social engineering?",
+        "answer": "While it can help find information, using it for social engineering is unethical and illegal."
+    },
+    {
+        "question": "Does Project Dork support multiple languages?",
+        "answer": "Currently, it primarily supports English, but future versions may include multilingual support."
+    },
+    {
+        "question": "Can I use Project Dork for digital marketing?",
+        "answer": "Yes, it can help find information related to SEO and online marketing strategies."
+    },
+    {
+        "question": "Is there a way to automate queries with Project Dork?",
+        "answer": "While automation is not recommended, advanced users may implement their own scripts to run queries."
+    },
+    {
+        "question": "Is there a risk of being banned by Google when using Google Dorks?",
+        "answer": "Excessive use of Google Dork queries may trigger temporary bans. It's recommended to use them responsibly."
+    },
+    {
+        "question": "What types of queries can Project Dork generate?",
+        "answer": "It can generate queries for finding login pages, exposed databases, directory listings, sensitive documents, and more."
+    },
+    {
+        "question": "Can I customize the queries in Project Dork?",
+        "answer": "Yes, you can modify query parameters based on your specific needs."
+    },
+    {
+        "question": "Does Project Dork work on all search engines?",
+        "answer": "It is primarily optimized for Google, but some queries may work on Bing, DuckDuckGo, and other search engines."
+    },
+    {
+        "question": "Is Project Dork free to use?",
+        "answer": "Yes, it is an open-source project available for free under an ethical usage policy."
+    },
+    {
+        "question": "Can Project Dork find personal data?",
+        "answer": "It can uncover publicly indexed information but should not be used for unethical or illegal activities."
+    },
+    {
+        "question": "Do I need an API key to use Project Dork?",
+        "answer": "No, Project Dork does not require an API key. It generates queries that users run manually."
+    },
+    {
+        "question": "How can I avoid being blocked by Google?",
+        "answer": "Use queries responsibly, avoid automation, and do not perform excessive searches in a short period."
+    },
+    {
+        "question": "Is there a way to automate searches using Project Dork?",
+        "answer": "Automation is not recommended due to Google’s strict policies, but advanced users may use scraping techniques."
+    },
+    {
+        "question": "Can Project Dork be integrated with other tools?",
+        "answer": "Yes, integration with cybersecurity, OSINT and other tools is under development. We will launch it soon, and if launched, you will receive an update via email to your registered email ID."
+    },
+    {
+        "question": "Does Project Dork require an internet connection?",
+        "answer": "Yes, an internet connection is needed to perform searches on Google."
+    },
+    {
+        "question": "How often is Project Dork updated?",
+        "answer": "Updates depend on community contributions and new developments in Google Dorking techniques."
+    },
+    {
+        "question": "Can Project Dork detect vulnerabilities?",
+        "answer": "It does not directly detect vulnerabilities but helps in finding exposed information that may indicate security risks."
+    },
+    {
+        "question": "Are there any alternatives to Project Dork?",
+        "answer": "Yes, other OSINT tools like Recon-ng and theHarvester provide similar functionalities."
+    },
+    {
+        "question": "How do I report bugs in Project Dork?",
+        "answer": "Report issues on the GitHub repository by opening a new issue."
+    },
+    {
+        "question": "What operating systems support Project Dork?",
+        "answer": "It works on Windows, macOS, and Linux."
+    },
+    {
+        "question": "Does Project Dork have logging features?",
+        "answer": "No, it does not log search queries for privacy reasons."
+    },
+    {
+        "question": "Can I use Project Dork in a corporate environment?",
+        "answer": "Yes, but ensure compliance with your company’s cybersecurity policies."
+    },
+    {
+        "question": "What is the best way to learn Google Dorking?",
+        "answer": "Practice using various search operators and refer to cybersecurity documentation."
+    },
+    {
+        "question": "Are there legal consequences for using Google Dorks?",
+        "answer": "Using them ethically is fine, but searching for unauthorized data can have legal consequences."
+    },
+    {
+        "question": "How do I generate a specific type of Google Dork query?",
+        "answer": "Refer to Project Dork's documentation or specify parameters based on your needs."
+    },
+    {
+        "question": "Does Project Dork have a user manual?",
+        "answer": "Yes, documentation is available on Documentation page and also on GitHub."
+    },
+    {
+        "question": "Can Project Dork be used for academic research?",
+        "answer": "Yes, it can assist in cybersecurity research and ethical hacking studies."
+    },
+    {
+        "question": "Can I request new features for Project Dork?",
+        "answer": "Yes, feature requests can be submitted via GitHub."
+    },
+    {
+        "question": "What is the difference between Project Dork and a search engine?",
+        "answer": "Project Dork helps craft advanced queries, while search engines retrieve indexed content."
+    },
+    {
+        "question": "Does Project Dork have an API?",
+        "answer": "No, it does not currently offer an API, tools is under development. We will launch it soon, and if launched, you will receive an update via email to your registered email ID."
+    },
+    {
+        "question": "Will Project Dork support browser extensions?",
+        "answer": "Future development may include browser-based integrations."
+    },
+    {
+        "question": "Can I use Project Dork for personal projects?",
+        "answer": "Yes, it can be used for personal projects as long as it adheres to ethical guidelines."
+    },
+    {
+        "question": "Is there a risk of being banned by Google when using Google Dorks?",
+        "answer": "Excessive use of Google Dork queries may trigger temporary bans. It's recommended to use them responsibly."
+    },
+    {
+        "question": "What types of queries can Project Dork generate?",
+        "answer": "It can generate queries for finding login pages, exposed databases, directory listings, sensitive documents, and more."
+    },
+    {
+        "question": "Can I customize the queries in Project Dork?",
+        "answer": "Yes, you can modify query parameters based on your specific needs."
+    },
+    {
+        "question": "What is Project Dork?",
+        "answer": "Project Dork is a SaaS platform designed to help businesses and professionals generate advanced search queries for finding specific online data."
+    },
+    {
+        "question": "Who can use Project Dork?",
+        "answer": "Project Dork is ideal for cybersecurity experts, researchers, digital marketers, business analysts, and anyone who needs advanced search capabilities."
+    },
+    {
+        "question": "What industries benefit from Project Dork?",
+        "answer": "Industries like cybersecurity, digital marketing, journalism, education, and business intelligence can benefit from Project Dork."
+    },
+    {
+        "question": "Does Project Dork support team collaboration?",
+        "answer": "Team collaboration features are under development and will be available in future updates."
+    },
+    {
+        "question": "Can Project Dork generate SEO-related queries?",
+        "answer": "Yes, Project Dork can generate queries to help with SEO research and online marketing strategies."
+    },
+    {
+        "question": "Is Project Dork suitable for small businesses?",
+        "answer": "Yes, Project Dork is designed to be scalable and can be used by small businesses as well as large enterprises."
+    },
+    {
+        "question": "Does Project Dork offer a free trial?",
+        "answer": "Yes, a free trial is available for new users to explore the platform's features."
+    },
+    {
+        "question": "What subscription plans does Project Dork offer?",
+        "answer": "Project Dork offers Basic, Pro, and Enterprise subscription plans to cater to different user needs."
+    },
+    {
+        "question": "Can I cancel my subscription at any time?",
+        "answer": "Yes, you can cancel your subscription at any time through your account settings."
+    },
+    {
+        "question": "Does Project Dork provide customer support?",
+        "answer": "Yes, customer support is available via email and live chat for all users."
+    },
+    {
+        "question": "What is the uptime guarantee for Project Dork?",
+        "answer": "Project Dork guarantees 99.9% uptime for its SaaS platform."
+    },
+    {
+        "question": "Does Project Dork offer training for new users?",
+        "answer": "Yes, training materials and tutorials are available on the website and GitHub."
+    },
+    {
+        "question": "Can I integrate Project Dork with my existing tools?",
+        "answer": "Integration with third-party tools is under development and will be available soon."
+    },
+    {
+        "question": "Does Project Dork support multiple users on one account?",
+        "answer": "Yes, multi-user support is available for Pro and Enterprise plans."
+    },
+    {
+        "question": "Can I export my query history?",
+        "answer": "Yes, you can export your query history in CSV format."
+    },
+    {
+        "question": "Does Project Dork have a mobile app?",
+        "answer": "A mobile app is under development and will be launched soon."
+    },
+    {
+        "question": "What is the refund policy for Project Dork?",
+        "answer": "Refunds are available within 14 days of purchase for annual subscriptions."
+    },
+    {
+        "question": "Can I customize the queries generated by Project Dork?",
+        "answer": "Yes, you can customize query parameters to suit your specific needs."
+    },
+    {
+        "question": "Does Project Dork offer API access?",
+        "answer": "API access is available for Enterprise users to integrate Project Dork into their workflows."
+    },
+    {
+        "question": "Is Project Dork GDPR compliant?",
+        "answer": "Yes, Project Dork is fully compliant with GDPR regulations."
+    },
+    {
+        "question": "Can I use Project Dork for competitive analysis?",
+        "answer": "Yes, Project Dork can help uncover publicly available information about competitors."
+    },
+    {
+        "question": "Does Project Dork provide analytics for queries?",
+        "answer": "Yes, analytics features are available to track the performance of your queries."
+    },
+    {
+        "question": "Can I schedule queries in Project Dork?",
+        "answer": "Scheduled queries are a feature under development and will be available soon."
+    },
+    {
+        "question": "Does Project Dork support multilingual queries?",
+        "answer": "Currently, Project Dork supports English, but multilingual support is planned for future updates."
+    },
+    {
+        "question": "What is the difference between Project Dork and traditional search engines?",
+        "answer": "Project Dork generates advanced search queries to find specific information, while traditional search engines provide general search results."
+    },
+    {
+        "question": "Can I use Project Dork for academic research?",
+        "answer": "Yes, Project Dork is a valuable tool for academic research in cybersecurity and data analysis."
+    },
+    {
+        "question": "Does Project Dork offer a dark mode?",
+        "answer": "Yes, Project Dork includes a dark mode for a better user experience."
+    },
+    {
+        "question": "Can I share my queries with others?",
+        "answer": "Yes, you can share your queries via a unique link or export them as a file."
+    },
+    {
+        "question": "Does Project Dork have a browser extension?",
+        "answer": "A browser extension is under development and will be launched soon."
+    },
+    {
+        "question": "Can I use Project Dork offline?",
+        "answer": "No, an internet connection is required to use Project Dork."
+    },
+    {
+        "question": "Does Project Dork offer a demo?",
+        "answer": "Yes, a live demo is available on the website for new users."
+    },
+    {
+        "question": "What is the purpose of Project Dork?",
+        "answer": "The purpose of Project Dork is to simplify the process of finding hidden information online using advanced search techniques."
+    },
+    {
+        "question": "Can I request new features for Project Dork?",
+        "answer": "Yes, feature requests can be submitted via GitHub or the feedback form on the website."
+    },
+    {
+        "question": "Does Project Dork support cloud storage?",
+        "answer": "Yes, query history and settings are stored securely in the cloud."
+    },
+    {
+        "question": "Can I use Project Dork for penetration testing?",
+        "answer": "Yes, ethical hackers and penetration testers use Google Dork queries to find vulnerabilities in their own systems."
+    },
+    {
+        "question": "Does Project Dork offer a referral program?",
+        "answer": "Yes, you can earn rewards by referring new users to Project Dork."
+    },
+    {
+        "question": "Is there a limit to the number of queries I can run?",
+        "answer": "There is no hard limit, but excessive queries may lead to temporary bans from search engines."
+    },
+    {
+        "question": "Can I use Project Dork for social media analysis?",
+        "answer": "Yes, Project Dork can help find publicly available information on social media platforms."
+    },
+    {
+        "question": "Does Project Dork offer a knowledge base?",
+        "answer": "Yes, a knowledge base is available on the website to help users get started."
+    },
+    {
+        "question": "Can I use Project Dork for digital forensics?",
+        "answer": "Yes, it can assist in digital forensics by uncovering publicly available data."
+    },
+    {
+        "question": "Does Project Dork support two-factor authentication?",
+        "answer": "Yes, two-factor authentication is available for added security."
+    },
+    {
+        "question": "Can I integrate Project Dork with Slack or Teams?",
+        "answer": "Integration with Slack and Teams is under development and will be available soon."
+    },
+    {
+        "question": "Does Project Dork offer discounts for educational institutions?",
+        "answer": "Yes, discounts are available for educational institutions and non-profits."
+    },
+    {
+        "question": "Can I use Project Dork for threat intelligence?",
+        "answer": "Yes, it can assist in gathering threat intelligence by finding publicly available information."
+    },
+    {
+        "question": "Does Project Dork provide real-time query results?",
+        "answer": "Yes, query results are generated in real-time."
+    },
+    {
+        "question": "Can I customize the dashboard in Project Dork?",
+        "answer": "Yes, the dashboard is customizable to suit your preferences."
+    },
+    {
+        "question": "Does Project Dork offer a feedback system?",
+        "answer": "Yes, users can provide feedback directly through the platform."
+    },
+    {
+        "question": "Can I use Project Dork for data visualization?",
+        "answer": "Data visualization features are under development and will be available in future updates."
+    },
+    {
+        "question": "Does Project Dork have a community forum?",
+        "answer": "Yes, a community forum is available for users to discuss and share ideas."
+    },
+    {
+        "question": "Can I use Project Dork for job searching?",
+        "answer": "Yes, it can help find job postings and company information."
+    },
+    {
+        "question": "Does Project Dork offer a mobile-friendly interface?",
+        "answer": "Yes, the web interface is responsive and works well on mobile devices."
+    },
+    {
+        "question": "Can I use Project Dork for market research?",
+        "answer": "Yes, it can assist in gathering publicly available market data."
+    },
+    {
+        "question": "Does Project Dork support voice commands?",
+        "answer": "Voice command support is under development and will be available soon."
+    },
+    {
+        "question": "Can I use Project Dork for content creation?",
+        "answer": "Yes, it can help find content ideas and sources for articles."
+    },
+    {
+        "question": "Does Project Dork offer a newsletter?",
+        "answer": "Yes, you can subscribe to the newsletter for updates and tips."
+    },
+    {
+        "question": "Can I use Project Dork for personal branding?",
+        "answer": "Yes, it can help find information to enhance your personal brand online."
+    },
+    {
+        "question": "Does Project Dork have a user community?",
+        "answer": "Yes, there is an active user community on GitHub and various forums."
+    },
+    {
+        "question": "Can I use Project Dork for online research?",
+        "answer": "Yes, it can assist in finding information for various online research projects."
+    },
+    {
+        "question": "Does Project Dork offer a customer loyalty program?",
+        "answer": "Yes, a customer loyalty program is available for long-term users."
+    },
+    {
+        "question": "Can I use Project Dork for data collection?",
+        "answer": "Yes, it can help find publicly available data for collection."
+    },
+    {
+        "question": "Can I use Project Dork for data mining?",
+        "answer": "Yes, it can assist in finding publicly available data for mining."
+    },
+    {
+        "question": "Does Project Dork offer a bug bounty program?",
+        "answer": "Yes, a bug bounty program is available for users to report vulnerabilities."
+    },
+    {
+        "question": "Can I use Project Dork for web scraping?",
+        "answer": "While it generates queries, it is not specifically designed for web scraping. Users should follow ethical guidelines."
+    },
+    {
+        "question": "Does Project Dork have a privacy policy?",
+        "answer": "Yes, a privacy policy is available on the website."
+    },
+    {
+        "question": "Can I use Project Dork for lead generation?",
+        "answer": "Yes, it can help find leads and contact information."
+    },
+    {
+        "question": "Does Project Dork support custom domains?",
+        "answer": "Custom domain support is under development and will be available soon."
+    },
+    {
+        "question": "Can I use Project Dork for event planning?",
+        "answer": "Yes, it can help find event information and resources."
+    },
+    {
+        "question": "Does Project Dork offer a referral program?",
+        "answer": "Yes, you can earn rewards by referring new users to Project Dork."
+    },
+    {
+        "question": "Can I use Project Dork for public records searches?",
+        "answer": "Yes, it can assist in finding publicly available records."
+    },
+    {
+        "question": "Does Project Dork have a mobile app?",
+        "answer": "A mobile app is under development and will be launched soon."
+    },
+    {
+        "question": "Can I use Project Dork for online reputation management?",
+        "answer": "Yes, it can help find information to manage your online reputation."
+    },
+    {
+        "question": "Does Project Dork offer a loyalty program?",
+        "answer": "Yes, a loyalty program is available for long-term users."
+    },
+    {
+        "question": "Can I use Project Dork for data analysis?",
+        "answer": "Data analysis features are under development and will be available in future updates."
+    },
+    {
+        "question": "Does Project Dork support third-party plugins?",
+        "answer": "Third-party plugin support is under development and will be available soon."
+    },
+    {
+        "question": "Can I use Project Dork for email marketing?",
+        "answer": "Yes, it can help find email addresses and contact information."
+    },
+    {
+        "question": "Does Project Dork offer a free version?",
+        "answer": "A free version with limited features is available for new users."
+    },
+    {
+        "question": "Can I use Project Dork for affiliate marketing?",
+        "answer": "Yes, it can assist in finding affiliate programs and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a knowledge base?",
+        "answer": "Yes, a knowledge base is available on the website to help users get started."
+    },
+    {
+        "question": "Can I use Project Dork for public relations?",
+        "answer": "Yes, it can help find information for PR campaigns."
+    },
+    {
+        "question": "Does Project Dork offer a satisfaction guarantee?",
+        "answer": "Yes, a satisfaction guarantee is available for all subscription plans."
+    },
+    {
+        "question": "Can I use Project Dork for crisis management?",
+        "answer": "Yes, it can help find information to manage crises effectively."
+    },
+    {
+        "question": "Does Project Dork support custom branding?",
+        "answer": "Custom branding support is under development and will be available soon."
+    },
+    {
+        "question": "Can I use Project Dork for influencer marketing?",
+        "answer": "Yes, it can assist in finding influencers and contact information."
+    },
+    {
+        "question": "Does Project Dork offer a free trial?",
+        "answer": "Yes, a free trial is available for new users to explore the platform's features."
+    },
+    {
+        "question": "Can I use Project Dork for content curation?",
+        "answer": "Yes, it can help find content ideas and sources for curation."
+    },
+    {
+        "question": "Does Project Dork have a user forum?",
+        "answer": "Yes, a user forum is available for discussions and sharing ideas."
+    },
+    {
+        "question": "Can I use Project Dork for online surveys?",
+        "answer": "Yes, it can help find survey tools and resources."
+    },
+    {
+        "question": "Does Project Dork offer a community support system?",
+        "answer": "Yes, community support is available through forums and GitHub."
+    },
+    {
+        "question": "Can I use Project Dork for online training?",
+        "answer": "Yes, it can help find online training resources and courses."
+    },
+    {
+        "question": "Does Project Dork have a customer feedback system?",
+        "answer": "Yes, users can provide feedback directly through the platform."
+    },
+    {
+        "question": "Can I use Project Dork for online networking?",
+        "answer": "Yes, it can help find networking opportunities and contacts."
+    },
+    {
+        "question": "Does Project Dork offer a free consultation?",
+        "answer": "Yes, a free consultation is available for new users."
+    },
+    {
+        "question": "Can I use Project Dork for online fundraising?",
+        "answer": "Yes, it can help find fundraising platforms and resources."
+    },
+    {
+        "question": "Does Project Dork have a user guide?",
+        "answer": "Yes, a user guide is available on the website and GitHub."
+    },
+    {
+        "question": "Can I use Project Dork for online advertising?",
+        "answer": "Yes, it can assist in finding advertising opportunities and platforms."
+    },
+    {
+        "question": "Does Project Dork offer a referral program?",
+        "answer": "Yes, you can earn rewards by referring new users to Project Dork."
+    },
+    {
+        "question": "Can I use Project Dork for online coaching?",
+        "answer": "Yes, it can help find coaching resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a customer support team?",
+        "answer": "Yes, customer support is available via email and live chat."
+    },
+    {
+        "question": "Can I use Project Dork for online consulting?",
+        "answer": "Yes, it can help find consulting resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork offer a loyalty program?",
+        "answer": "Yes, a loyalty program is available for long-term users."
+    },
+    {
+        "question": "Can I use Project Dork for online tutoring?",
+        "answer": "Yes, it can help find tutoring resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a community engagement program?",
+        "answer": "Yes, community engagement programs are available for users to participate in."
+    },
+    {
+        "question": "Can I use Project Dork for online mentoring?",
+        "answer": "Yes, it can help find mentoring resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork offer a satisfaction guarantee?",
+        "answer": "Yes, a satisfaction guarantee is available for all subscription plans."
+    },
+    {
+        "question": "Can I use Project Dork for online workshops?",
+        "answer": "Yes, it can help find workshop resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a user community?",
+        "answer": "Yes, there is an active user community on GitHub and various forums."
+    },
+    {
+        "question": "Can I use Project Dork for online events?",
+        "answer": "Yes, it can help find event resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork offer a free version?",
+        "answer": "A free version with limited features is available for new users."
+    },
+    {
+        "question": "Can I use Project Dork for online competitions?",
+        "answer": "Yes, it can help find competition resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a customer loyalty program?",
+        "answer": "Yes, a customer loyalty program is available for long-term users."
+    },
+    {
+        "question": "Can I use Project Dork for online challenges?",
+        "answer": "Yes, it can help find challenge resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork offer a referral program?",
+        "answer": "Yes, you can earn rewards by referring new users to Project Dork."
+    },
+    {
+        "question": "Can I use Project Dork for online contests?",
+        "answer": "Yes, it can help find contest resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a user feedback system?",
+        "answer": "Yes, users can provide feedback directly through the platform."
+    },
+    {
+        "question": "Can I use Project Dork for online challenges?",
+        "answer": "Yes, it can help find challenge resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork offer a free trial?",
+        "answer": "Yes, a free trial is available for new users to explore the platform's features."
+    },
+    {
+        "question": "Can I use Project Dork for online competitions?",
+        "answer": "Yes, it can help find competition resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork have a user community?",
+        "answer": "Yes, there is an active user community on GitHub and various forums."
+    },
+    {
+        "question": "Can I use Project Dork for online events?",
+        "answer": "Yes, it can help find event resources and opportunities."
+    },
+    {
+        "question": "Does Project Dork offer a satisfaction guarantee?",
+        "answer": "Yes, a satisfaction guarantee is available for all subscription plans."
+    },
+    {
+        "question": "Can I use Project Dork for online workshops?",
+        "answer": "Yes, it can help find workshop resources and opportunities."
+    }
+]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+</head>
+<body class="bg-gray-900 text-white flex flex-col justify-center items-center min-h-screen">
+    <!-- Sign Up Container -->
+
+    <!-- Flash Messages -->
+    <div class="container mt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert-container">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="signup-container">
+        <h1 class="text-3xl font-bold mb-4">Sign Up</h1>
+        <form id="signupForm" action="/signup" method="POST">
+           
+
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your name">
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+            <p id="password-error" style="color: red; font-size: 14px; margin-top: 5px; display: none;">❌ Passwords do not match!</p>
+            <p id="email-error" style="color: red; font-size: 14px; margin-top: 5px; display: none;">❌ Email already exists!</p>   
+            
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <br>
+        <p class="mt-4">Already have an account? <a href="/signin" class="text-blue-400 underline">Sign In</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="signup-footer">
+        <div class="signup-footer-container">
+            <div class="signup-footer-column">
+                <h3>About Project Dork</h3>
+                <p>Project Dork is a SaaS platform designed to help users generate advanced Google Dork queries effortlessly.</p>
+            </div>
+            <div class="signup-footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/documentation">Documentation</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
+                </ul>
+            </div>
+            <div class="signup-footer-column">
+                <h3>Follow Us</h3>
+                <div class="signup-social-links">
+                    <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
+                    <a href="https://github.com" target="_blank">💻 GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="signup-footer-bottom">
+            <p>© 2025 Project Dork. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

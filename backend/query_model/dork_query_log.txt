@@ -1,0 +1,24 @@
+site:gmail.com "location:Hyderabad" "list" "software" "engineering"
+site:gmail.com "location:Hyderabad" "list" "software" "engineering"
+site:github.com site:gmail.com filetype:pdf "resume" "projects" "new" "york"
+site:github.com site:gmail.com filetype:pdf "location:Hyderabad" "resume" "projects"
+site:github.com site:gmail.com filetype:pdf "location:New York" "resume" "projects"
+site:gmail.com "sdk" "softwasr"
+site:github.com OR -site:gmail.com AND filetype:pdf AND location:New York AND "resume" OR "projects"
+site:instagram.com AND location:Delhi AND "hyerabad" OR "accounts" OR "more" OR "then" OR "100k"
+filetype:pdf AND intext:"find" OR intext:"cybersecurity" OR intext:"files" OR intext:"hyderabad" OR intext:"india"
+filetype:pdf AND intext:"find" OR intext:"cybersecurity" OR intext:"files" OR intext:"in" OR intext:"hyderabad" OR intext:"india"
+filetype:pdf AND location:Hyderabad AND "find" OR "cybersecurity" OR "files" OR "india"
+site:github.com AND filetype:pdf AND "find" OR "cybersecurity"
+site:github.com AND filetype:pdf AND "cybersecurity"
+filetype:pdf AND location:Hyderabad AND "cybersecurity" OR "files" OR "india"
+music: AND "ravan"
+filetype:pdf AND location:Bangalore,Karnataka, Indai
+filetype:pdf AND location:Bangalore,Karnataka, Indai AND intext:"research papers" OR intext:"artificial intelligence"
+filetype:pdf AND location:Hyderabad,Telangana,India AND intext:"research papers" OR intext:"machine learning"
+filetype:pdf AND location:Bangalore,Karnataka, Indai AND intext:"research papers" OR intext:"artificial intelligence"
+filetype:pdf AND location:Bangalore,Karnataka, Indai AND (intext:"research papers" OR intext:"artificial intelligence &  machine learning")
+(site:bitbucket.org OR site:twitch.tv OR site:pinterest.com OR site:springer.com OR site:tradingview.com) AND filetype:pdf AND (intext:"research papers" OR intext:"artificial intelligence" OR intext:"machine learning")
+(site:coinmarketcap.com OR site:researchgate.net OR site:angel.co OR site:arstechnica.com OR site:bitbucket.org) AND filetype:pdf AND (intext:"research papers" OR intext:"artificial intelligence" OR intext:"machine learning")
+(site:theinformation.com OR site:forbes.com OR site:linkedin.com/learning) AND (intext:"machine learning model files" OR intext:"object detection")
+(site:angel.co OR site:minimalistbaker.com OR site:federalist.com) AND intext:"common password list"

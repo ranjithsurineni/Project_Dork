@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Dork SaaS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+</head>
+<body class="about-us-body">
+    
+    <header class="about-us-header">
+        
+        <nav>
+            <div>
+                <a href="/">Home</a>
+                <a href="/documentation">Documentation</a>
+                <a href="/contact">Contact</a>
+                <a href="/aboutus">About Us</a>
+                <a href="/index">Try Once🚀</a>
+            </div>
+            <div>
+                {% if current_user.is_authenticated %}
+                    <a href="/dashboard">Dashboard</a>
+                    <a href="/logout">Logout</a>
+                {% else %}
+                    <a href="/signin">Sign In</a>
+                    <a href="/signup">Sign Up</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div class="about-us-container">
+        <section class="about-us-section">
+            <h2>Our Mission</h2>
+            <p>As the sole developer of<strong> Dork SaaS </strong> my mission is to revolutionize web reconnaissance by providing an intelligent, 
+                automated Google Dork Query Generator that empowers cybersecurity professionals, 
+                ethical hackers, penetration testers, and security researchers. By integrating AI-driven automation,
+                 I aim to simplify and accelerate security assessments while ensuring full compliance with ethical standards.
+            </p>
+        </section>
+
+        <section class="about-us-section">
+            <h2>Our Vision</h2>
+            <p>We envision a future where <strong>AI-powered security tools</strong> become a standard for organizations, security analysts, 
+                and independent researchers, allowing for real-time threat detection and proactive cybersecurity measures. 
+                Dork SaaS is more than a tool—it's a game-changer in the ethical hacking and security research ecosystem, 
+                designed to enhance the efficiency, accuracy, and impact of security professionals worldwide.
+            </p>
+        </section>
+
+        <section class="about-us-profile">
+            <h2>Meet the Developer</h2>
+            <div class="about-us-profile-card">
+                <img src="{{ url_for('static', filename='images/01.png') }}" alt="My Photo" class="about-us-profile-img">
+                <h3>Ranjith Kumar</h3>
+                <p>Founder, Developer, and Visionary behind Dork SaaS</p>
+            </div>
+            <p>With expertise in <strong>AI, cybersecurity, and automation</strong>, I created <strong>Dork SaaS</strong> to bridge the gap between traditional penetration testing and modern AI-driven security solutions. 
+                My focus is on developing innovative, high-impact tools that empower professionals to detect vulnerabilities faster and fortify digital security worldwide.
+            </p>
+        </section>
+
+        <section class="about-us-section">
+            <h2>Why Dork SaaS? The Future of Cybersecurity</h2>
+            <p>The cybersecurity landscape is evolving, and <strong>AI-driven automation</strong> is the future. 
+                Organizations and security researchers face growing challenges such as increased cyber threats, complex web vulnerabilities, and data breaches.
+                <strong>Dork SaaS</strong> offers a next-gen AI-powered reconnaissance tool that: </p>
+            <ul>
+                <li>🚀 Automates <strong>Google Dork queries for faster</strong>, more efficient security analysis.</li>
+                <li>🔍 Enhances <strong>vulnerability detection</strong> through AI-driven query optimization.</li>
+                <li>🛡️ Supports <strong>ethical hacking and security research</strong> with compliance-focused methodologies.</li>
+                <li>📊 Provides <strong>data-driven insights</strong> for better security decision-making.</li>
+            </ul>
+            <p>By leveraging <strong>machine learning and advanced search algorithms</strong>, <strong>Dork SaaS</strong> aims to set new standards in web reconnaissance, 
+                making cybersecurity more accessible, scalable, and efficient for professionals and businesses alike.</p>
+        </section>
+
+        <section class="about-us-section">
+            <h2>Achievements & Milestones</h2>
+            <ul>
+                <li><strong>2025:</strong> Launched Dork SaaS with automated reconnaissance capabilities.</li>
+                <li><strong>2026:</strong> Reached 10,000+ global users, solidifying its role in ethical hacking communities.</li>
+                <li><strong>2027:</strong> Introduced AI-based query enhancement, increasing accuracy and relevance of results.</li>
+                <li><strong>2028:</strong> Recognized as a top cybersecurity tool by industry leaders.</li>
+            </ul>
+        </section>
+
+        <section class="about-us-section">
+            <h2>The Business Impact of Dork SaaS</h2>
+            <p><strong>Dork SaaS is not just a tool—it’s a business innovation.</strong> As cybersecurity threats grow, companies need <strong>automated, AI-powered solutions</strong> to protect their digital assets.
+                 By providing <strong>enterprise-level automation</strong>, <strong>Dork SaaS</strong> is positioned as a leading-edge <strong>cybersecurity SaaS platform</strong> that can be integrated into: </p>
+            <ul>
+                <li>🏢 <strong>Cybersecurity firms</strong> for enhanced reconnaissance workflows.</li>
+                <li>🔒 <strong>Enterprises & SMBs</strong> to protect against web vulnerabilities.</li>
+                <li>🛠 <strong>Penetration testing & red teaming</strong> for security audits.</li>
+                <li>📚 <strong>Educational institutions</strong> for cybersecurity training.</li>
+            </ul>
+            <p>As AI-driven security becomes a <strong>business necessity</strong>, <strong>Dork SaaS</strong> aims to provide <strong>subscription-based models</strong>, 
+                offering on-demand vulnerability scanning and web reconnaissance services to businesses worldwide.</p>
+        </section>
+
+        <section class="about-us-section">
+            <h2>Upcoming Features <span class="flash">Coming Soon! ✨</span></h2>
+            <ul>
+                <li>⚡ <strong>AI-Powered Query Optimization</strong> – Smarter, more precise dorking.</li>
+                <li>⚡ <strong>Enhanced Search Filters</strong> – Custom filters for deep web reconnaissance.</li>
+                <li>⚡ <strong>Dark Mode Interface</strong> – A sleek, modern UI for enhanced usability.</li>
+                <li>⚡ <strong>Mobile App Version</strong> – Security research on the go.</li>
+                <li>⚡ <strong>Cloud-Based API</strong> – Allowing businesses to integrate **Dork SaaS** into their workflows.</li>
+                <li>⚡ <strong>Automated Threat Reports</strong> – AI-generated reports for vulnerability management.</li>
+            </ul>
+        </section>
+
+        <section class="about-us-section">
+            <h2>Be Part of the Cybersecurity Revolution</h2>
+            <p>Join <strong>Dork SaaS</strong> in shaping the future of <strong>ethical hacking, penetration testing, and cybersecurity research</strong>. 
+                Stay ahead in security automation and be part of the revolution that makes the <strong>digital world safer for everyone</strong>.</p>
+        </section>
+</div>
+
+
+   
+
+    <br>
+    <br>
+ <!-- Footer Section -->
+
+
+    <!-- Floating Chatbot Button -->
+    <div id="chatbot-container">
+        <div id="chatbot-header" onclick="toggleChatbot()">🤖 Chat with us</div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask something..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendChatbotMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <!------------------footer------------------>
+    <footer class="aboutus-footer">
+        <div class="aboutus-footer-container">
+            <!-- About Dork SaaS -->
+            <div class="aboutus-footer-column">
+                <h3>About Dork SaaS</h3>
+                <p>Dork SaaS is an AI-powered cybersecurity tool that automates Google Dork queries for ethical hackers, security researchers, and businesses.</p>
+                <p>Founded in 2025, we are dedicated to revolutionizing cybersecurity automation with innovative technology.</p>
+            </div>
+    
+            <!-- Our Mission & Vision -->
+            <div class="aboutus-footer-column">
+                <h3>Our Mission & Vision</h3>
+                <ul>
+                    <li>🔍<strong> Mission:</strong> Enhance web reconnaissance for security professionals.</li>
+                    <li>🚀 <strong>Vision</strong>: To become the #1 AI-driven cybersecurity SaaS platform.</li>
+                    <li>💡<strong> Core Values:</strong> Innovation, Security, Transparency.</li>
+                </ul>
+            </div>
+    
+            <!-- Milestones & Achievements -->
+            <div class="aboutus-footer-column">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>🏆 2025: Launched Dork SaaS with AI-powered query automation.</li>
+                    <li>🌍 2026: Reached 10,000+ global users.</li>
+                    <li>🤖 2027: Integrated AI-based search enhancement.</li>
+                    <li>🔒 2028: Recognized as a top cybersecurity tool.</li>
+                </ul>
+            </div>
+    
+            <!-- Connect With Us -->
+            <div class="aboutus-footer-column">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="https://twitter.com/DorkSaaS" target="_blank">🐦 Twitter</a></li>
+                    <li><a href="https://github.com/DorkSaaS" target="_blank">💻 GitHub</a></li>
+                    <li><a href="https://linkedin.com/company/dork-saas" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://discord.gg/dorksaas" target="_blank">💬 Discord</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="aboutus-footer-column">
+                <h3>Stay Updated 📢</h3>
+                <p>Subscribe for updates on cybersecurity, AI innovations, and exclusive features.</p>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Copyright & Legal -->
+        <div class="aboutus-footer-bottom">
+            <p>© 2025 Dork SaaS. All Rights Reserved. | Innovating Cybersecurity with AI.</p>
+        </div>
+    </footer>
+    
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    
+</body>
+</html>

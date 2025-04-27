@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dork SaaS Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: #00ffcc;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover {
+            color: #ffcc00; 
+        }
+
+        .btn-logout {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-logout:hover {
+            background: #e6b800;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            width: 220px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        .sidebar .nav-link {
+            color: #ffffff;
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+
+        /* Main Content */
+        main {
+            margin-left: 240px;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #00ffcc;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background: #ffcc00;
+            color: black;
+            padding: 10px 15px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: #e6b800;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            main {
+                margin-left: 0;
+            }
+        }
+
+
+        /* Footer */
+
+        .footer {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Gradient background matching the theme */
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for separation */
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Add spacing between sections */
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 280px; /* Slightly larger minimum width for better alignment */
+            margin: 20px;
+            text-align: left; /* Align text to the left for better readability */
+        }
+
+        .footer-section h3 {
+            color: #00ffcc;
+            margin-bottom: 15px;
+            font-size: 1.6rem; /* Slightly larger font size for headings */
+            border-bottom: 2px solid #00ffcc; /* Add a bottom border for emphasis */
+            padding-bottom: 5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 10px 0; /* Increased spacing for better readability */
+        }
+
+        .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s, transform 0.2s; /* Add a slight transform effect */
+        }
+
+        .footer-section ul li a:hover {
+            color: #ffcc00;
+            transform: translateX(5px); /* Slight movement on hover */
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px; /* Add spacing between icons */
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.6rem; /* Slightly larger icons */
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+            transform: scale(1.2); /* Slight zoom effect on hover */
+        }
+
+        #newsletter-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+            gap: 10px; /* Add spacing between form elements */
+        }
+
+        #newsletter-email {
+            width: 100%;
+            max-width: 300px; /* Slightly larger input field */
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #00ffcc; /* Add a border matching the theme */
+            background: rgba(255, 255, 255, 0.1); /* Subtle background for input */
+            color: #ffffff;
+        }
+
+        #newsletter-email::placeholder {
+            color: #cccccc; /* Lighter placeholder text */
+        }
+
+        #newsletter-form button {
+            background: #00ffcc;
+            color: black;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        #newsletter-form button:hover {
+            background: #e6b800;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #cccccc; /* Lighter text for copyright */
+            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle top border */
+            padding-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px; /* Increased spacing for better layout */
+            }
+
+            .social-icons {
+                justify-content: center; /* Center icons on smaller screens */
+            }
+
+            #newsletter-form {
+                align-items: center; /* Center align the form */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">Home</a>
+        <a href="/index" class="navbar-brand">Dork_Generater</a>
+        <a href="/logout" class="btn-logout">Logout</a>
+    </nav>
+
+    <!-- Flash Messages -->
+    <div class="container mt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert-container">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div id="alert-container" class="container mt-3"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul>
+            <li><a class="nav-link active" href="#profile">Profile Overview</a></li>
+            <li><a class="nav-link" href="#queries">Query History</a></li>
+            <li><a class="nav-link" href="#generator">AI Query Generator</a></li>
+            <li><a class="nav-link" href="#security">Security Settings</a></li>
+            <li><a class="nav-link" href="#billing">Subscription & Billing</a></li>
+            <li><a class="nav-link" href="#api">API Access</a></li>
+            <li><a class="nav-link" href="#support">Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="profile">
+            <h2>Profile Overview</h2>
+            <p><strong>Name:</strong> {{ username }}</p>
+            <p><strong>Email:</strong>  {{ email }}</p>
+            <p><strong>Subscription:</strong> Pro Plan</p>
+            <p><strong>Account Created:</strong> {{ created_at }}</p>
+            <p>Manage your account and queries here.</p>
+        </section>
+
+        <section id="queries">
+            <h2>Query History</h2>
+            {% if query_history %}
+                <ul id="query-list">
+                    {% for query in query_history %}
+                        <li id="query-{{ query.id }}">
+                            <p>
+                                {{ query.query_text }} || 
+                                <small>{{ query.created_at.strftime("%Y-%m-%d %H:%M:%S") }}</small>
+                                <button class="btn btn-danger btn-sm delete-query-btn" data-query-id="{{ query.id }}">Delete</button>
+                            </p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No queries found.</p>
+            {% endif %}
+        </section>
+
+        <section id="generator">
+            <h2>AI Query Generator</h2>
+            <p>Generate optimized Google Dork queries with AI assistance.</p>
+            <textarea class="form-control" placeholder="Enter your query..."></textarea>
+            <button class="btn-custom">Generate Query</button>
+        </section>
+
+        <section id="security">
+            <h2>Security Settings</h2>
+            <ul>
+                <li>Enable Two-Factor Authentication (2FA)</li>
+                <li>Change Password</li>
+                <li>Update Email</li>
+                <li>Export Account Data</li>
+                <li>Delete Account</li>
+            </ul>
+        </section>
+
+        <section id="billing">
+            <h2>Subscription & Billing</h2>
+            <p><strong>Current Plan:</strong> Pro Plan</p>
+            <button class="btn-custom">Upgrade Plan</button>
+            <button class="btn-custom">View Billing History</button>
+        </section>
+
+        <section id="api">
+            <h2>API Access</h2>
+            <p><strong>API Key:</strong> XYZ123ABC</p>
+            <ul>
+                <li>Rate Limit: 1000 requests/month</li>
+                <li>Usage: 250/1000 requests used</li>
+            </ul>
+            <button class="btn-custom">View API Documentation</button>
+            <button class="btn-custom">Setup Webhooks</button>
+        </section>
+    </main>
+
+<!--------------------footer starts hear--------------->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/billing">Billing</a></li>
+                    <li><a href="/api-access">API Access</a></li>
+                    <li><a href="/support">Support</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@dorksaas.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Cyber Street, AI City</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="footer-section">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates on AI tools and Dork SaaS features.</p>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Dork SaaS. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<!--------------------footer ends hear--------------->
+
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

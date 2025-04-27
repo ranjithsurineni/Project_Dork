@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dork Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="Website Icon" type="png" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+<body class="index-body">
+
+    
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div>
+            <a href="/">Home</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/aboutus">About US</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container-index">
+        <h1 class="text-2xl font-bold text-center" style="color: aqua;">Google Dork Query Generator</h1>
+        <form action="/generate_dork" method="POST" class="mt-4">
+            <label for="user_input" class="block mb-2">Enter your search text:</label>
+            <input type="text" id="user_input" name="user_input" required placeholder="e.g., site:github.com AI projects" class="w-full p-2 border rounded-md text-black">
+            <button type="submit" class="btn">Generate Query</button>
+        </form>
+        <br>
+        {% if dork_query %}
+        <div id="result-container">
+            <h2 class="mt-4 text-lg">Generated Dork Query:</h2>
+            <p id="generated-query" class="bg-white text-black p-2 rounded-md" style="color: aliceblue; font-size: 20px;">{{ dork_query }}</p>
+            <div class="mt-4 flex justify-between">
+                <button class="btn" onclick="copyToClipboard()">Copy Text</button>
+                <button class="btn" onclick="googleSearch()">Google Search</button>
+                <button class="btn" id="save-query-btn" >Save Query</button>
+            </div>
+        </div>
+        {% endif %}
+        {% if error %}
+        <div id="error-container">
+            <h2 class="mt-4 text-lg text-red-500">Error:</h2>
+            <p id="error-message" class="bg-white text-black p-2 rounded-md">{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer class="index-footer">
+        <div class="index-footer-container">
+            <!-- About Dork SaaS -->
+            <div class="main-footer-column">
+                <h3>About Dork SaaS</h3>
+                <p>Dork SaaS is an advanced AI-driven cybersecurity tool designed to automate Google Dork queries for ethical hackers, security professionals, and researchers.</p>
+                <p>Empowering security experts with automated reconnaissance for enhanced vulnerability detection.</p>
+            </div>
+    
+            <!-- Key Features -->
+            <div class="index-footer-column">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>🤖 AI-Powered Query Optimization</li>
+                    <li>🔎 Advanced Search Filters</li>
+                    <li>📊 Real-Time Data Analysis</li>
+                    <li>🌙 Dark Mode & User-Friendly UI</li>
+                    <li>📱 Mobile Compatibility</li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="index-footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about">👤 About Us</a></li>
+                    <li><a href="/documentation">📜 Documentation</a></li>
+                    <li><a href="/contact">📩 Contact</a></li>
+                    <li><a href="/pricing">💰 Pricing</a></li>
+                    <li><a href="/faq">❓ FAQs</a></li>
+                </ul>
+            </div>
+    
+            <!-- Stay Connected -->
+            <div class="index-footer-column">
+                <h3>Stay Connected</h3>
+                <ul>
+                    <li><a href="https://twitter.com/DorkSaaS" target="_blank">🐦 Twitter</a></li>
+                    <li><a href="https://github.com/DorkSaaS" target="_blank">💻 GitHub</a></li>
+                    <li><a href="https://linkedin.com/company/dork-saas" target="_blank">🔗 LinkedIn</a></li>
+                    <li><a href="https://discord.gg/dorksaas" target="_blank">💬 Discord</a></li>
+                </ul>
+            </div>
+    
+            <!-- Newsletter Subscription -->
+            <div class="index-footer-column">
+                <h3>Subscribe for Updates</h3>
+                <p>Get the latest updates on cybersecurity tools and AI-driven advancements.</p>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Copyright & Legal -->
+        <div class="main-footer-bottom">
+            <p>© 2025 Dork SaaS. All Rights Reserved. | Securing the Web with AI.</p>
+        </div>
+    </footer>
+    
+        
+<!------------------------- JavaScript for save query to data base functionality -------------------------------------------------------------------------------->
+    <script>
+        // JavaScript to handle the "Save Query" button click
+        document.getElementById("save-query-btn").addEventListener("click", function () {
+            const queryText = document.getElementById("generated-query").textContent;
+
+            // Send the query to the /save_query route using Fetch API
+            fetch("/save_query", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ query: queryText }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        alert("Query saved successfully!");
+                    } else {
+                        alert(`Error: ${data.error}`);
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error saving query:", error);
+                    alert("An unexpected error occurred while saving the query.");
+                });
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+[
+    {
+        "user": "hi",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "hello",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "project dork features",
+        "bot": "Project Dork offers advanced search capabilities, customizable query generation, and a user-friendly interface for efficient data retrieval."
+    },
+    {
+        "user": "free trail online competation",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "free trail onlin",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "free trail",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "is free trail",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "offers free trail",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "offers free trail?",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "online evemts",
+        "bot": "❓ I'm not sure about that. Could you rephrase or ask something else?"
+    },
+    {
+        "user": "online events",
+        "bot": "Yes, it can help find event resources and opportunities."
+    },
+    {
+        "user": "license for this project",
+        "bot": "Project Dork is licensed under the MIT License, allowing free use and modification."
+    }
+]

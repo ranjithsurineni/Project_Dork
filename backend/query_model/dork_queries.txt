@@ -1,0 +1,14 @@
+site:search for AiML tutorials where the file type is pdf  inurl:admin
+site:search for AiML tutorials where the file type is pdf  intitle:"index of"
+site:search for AiML tutorials where the file type is pdf  ext:sql | ext:txt | ext:log
+site:search for AiML tutorials where the file type is pdf  inurl:login
+site:search for AiML tutorials where the file type is pdf  filetype:pdf | filetype:doc | filetype:xls
+site:search for AiML tutorials where the file type is pdf  intext:"password" | intext:"admin"
+site:search for AiML tutorials where the file type is pdf  inurl:wp-admin
+site:search for AiML tutorials where the file type is pdf  -www inurl:ftp
+site:search for AiML tutorials where the file type is pdf  ext:json | ext:config -git
+site:search for AiML tutorials where the file type is pdf  inurl:php?id=
+site:search for AiML tutorials where the file type is pdf  confidential OR sensitive filetype:xls OR filetype:csv
+inurl:/phpmyadmin site:search for AiML tutorials where the file type is pdf 
+intitle:"WebcamXP" | intitle:"webcam 7" site:search for AiML tutorials where the file type is pdf 
+site:pastebin.com intext:search for AiML tutorials where the file type is pdf 
